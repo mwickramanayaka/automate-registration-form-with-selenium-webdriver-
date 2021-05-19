@@ -42,8 +42,21 @@ public class seleniumTest {
 
 		String baseURL = "https://apply.sliit.lk/DownloadApplication/Inquiry";
 
+		String expectedTitle = "Inquiry - Online Registration System";
+		String actualTitle = "";
+
 		driver.manage().window().maximize();
 		driver.get(baseURL);
+
+		actualTitle = driver.getTitle();
+
+		if (actualTitle.contentEquals(expectedTitle)) {
+			System.out.println("Test Passed");
+		}else {
+			System.out.println("Test Failed");
+			driver.close();
+
+		}
 
 		WebElement checkBox = driver.findElement(By.xpath("//*[@id=\"ProgramFields\"]/div/div/label[1]"));
 		checkBox.click();
@@ -58,7 +71,7 @@ public class seleniumTest {
 		Select Country = new Select(CountryDropDown);
 
 		Country.selectByVisibleText("Syria");
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 
 		driver.quit();
 
