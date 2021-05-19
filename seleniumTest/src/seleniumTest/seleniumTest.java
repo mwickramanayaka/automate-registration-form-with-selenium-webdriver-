@@ -14,7 +14,7 @@ public class seleniumTest {
 
 	public static void main(String[] args) throws InterruptedException {
 
-		setBrowser();fffff
+		setBrowser();
 		setBrowserConfig();
 		runTest();
 
