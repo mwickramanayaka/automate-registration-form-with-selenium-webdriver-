@@ -21,7 +21,7 @@ public class seleniumTest {
 	}
 	public static void setBrowser() {
 
-		browser = "chrome";
+		browser = "firefox";
 
 	}
 
